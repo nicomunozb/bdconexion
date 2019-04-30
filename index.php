@@ -1,5 +1,10 @@
 <?php
 include("lib/constantes.php");
+
+if (!isset($_SESSION["Usuario"])){
+    header("location:".URLBASE."controladores/Accusuario");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <!--
@@ -76,12 +81,9 @@ SKIN: https://bootsnipp.com/snippets/2X0r
                                         </div>
                                     </div>
                                 </div>    
-                            </form>     
-
-
-
-                        </div>                     
-                    </div>  
+                        </form>
+                    </div>                     
+            </div>  
          </div>
     </body>
     </html>
